@@ -1,0 +1,59 @@
+CREATE TABLE `andru_dev`.`dbdt` (
+  `iddbdt` INT NOT NULL AUTO_INCREMENT,
+  `Date` VARCHAR(10) NULL,
+  `Company` VARCHAR(45) NULL,
+  `Day` VARCHAR(3) NULL,
+  `Week` VARCHAR(2) NULL,
+  `Month` VARCHAR(2) NULL,
+  `Year` VARCHAR(4) NULL,
+  `Plant` VARCHAR(45) NULL,
+  `Type` VARCHAR(45) NULL,
+  `Equipment` VARCHAR(45) NULL,
+  `From` VARCHAR(45) NULL,
+  `To` VARCHAR(45) NULL,
+  `Delay` INT NULL,
+  `Perc Affected` VARCHAR(45) NULL,
+  `Area Affected` VARCHAR(45) NULL,
+  `Time Affected` VARCHAR(45) NULL,
+  `Details` VARCHAR(255) NULL,
+  `Remarks` VARCHAR(255) NULL,
+  `Position` VARCHAR(45) NULL,
+  `Continuous` CHAR NULL,
+  `Category` VARCHAR(10) NULL,
+  `Shift` VARCHAR(11) NULL,
+  `Month Period` VARCHAR(45) NULL,
+  `Year Period` VARCHAR(45) NULL,
+  `Team` CHAR NULL,
+  `PlanUnplan` VARCHAR(45) NULL,
+  `Allocation` VARCHAR(45) NULL,
+  PRIMARY KEY (`iddbdt`));
+
+
+//Maybe
+  ALTER TABLE `andru_dev`.`dbdt`
+  ADD COLUMN `Derek` VARCHAR(45) NULL AFTER `Allocation`;
+
+//Maybe
+  ALTER TABLE `andru_dev`.`dbdt`
+  CHANGE COLUMN `Day` `Day` VARCHAR(5) NULL DEFAULT NULL ,
+  CHANGE COLUMN `Week` `Week` VARCHAR(5) NULL DEFAULT NULL ,
+  CHANGE COLUMN `Month` `Month` VARCHAR(5) NULL DEFAULT NULL ,
+  CHANGE COLUMN `Year` `Year` VARCHAR(5) NULL DEFAULT NULL ;
+
+
+//Maybe
+ALTER TABLE `andru_dev`.`dbdt`
+CHANGE COLUMN `Perc Affected` `Perc_Affected` VARCHAR(45) NULL DEFAULT NULL ,
+CHANGE COLUMN `Area Affected` `Area_Affected` VARCHAR(45) NULL DEFAULT NULL ,
+CHANGE COLUMN `Time Affected` `Time_Affected` VARCHAR(45) NULL DEFAULT NULL ,
+CHANGE COLUMN `Month Period` `Month_Period` VARCHAR(45) NULL DEFAULT NULL ;
+
+
+//maybe
+
+ALTER TABLE `andru_dev`.`dbdt`
+CHANGE COLUMN `Year Period` `Year_Period` VARCHAR(45) NULL DEFAULT NULL ;
+
+//maybe
+ALTER TABLE `andru_dev`.`dbdt`
+CHANGE COLUMN `Year` `Year` VARCHAR(10) NULL DEFAULT NULL ;
